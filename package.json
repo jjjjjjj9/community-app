@@ -1,0 +1,24 @@
+{
+    "id": "xf-shequ",
+    "scripts": {
+        "test": "eslint . --fix"
+    },
+    "dependencies": [],
+    "devDependencies": {
+        "eslint": "^8.2.0",
+        "eslint-config-airbnb": "^19.0.0"
+    },
+    "name": "智慧社区+小程序端",
+    "displayName": "智慧社区+小程序端",
+    "version": "1.17",
+    "description": "小程序：uniapp 的一体的智慧社区项目，角色有：业主，家庭成员，租户，物业管理人员，平台运营管理员 等；",
+    "keywords": [
+        "小程序，社区，物业，小区，置物"
+    ],
+    "dcloudext": {
+        "category": [
+            "uni-app前端模板",
+            "uni-app前端项目模板"
+        ]
+    }
+}

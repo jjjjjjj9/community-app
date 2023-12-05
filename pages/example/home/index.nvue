@@ -1,0 +1,148 @@
+<template>
+	<view >
+		<u-swiper :list="list" height="180" :circular="true" radius="0"></u-swiper>
+		<u-notice-bar icon="http://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/gonggao.png" :text="text4"
+			direction="column" color="#7b7979" bgColor="#fff" fontSize="15" url="/pages/componentsB/notice/list">
+		</u-notice-bar>
+		<view class="bankuai">
+			<view class="biaoti">
+				<u-icon label="常用服务" size="20"
+					name="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/shu.png"></u-icon>
+			</view>
+			<u-row justify="space-between" customStyle="margin: 10px 0 0 0" gutter="10">
+				<u-col span="6">
+					<view class="demo-layout-a" @click="Jom('/pages/componentsA/fangwu/details')">
+						<image src="../../../static/images/fangwu.png" mode="widthFix"></image>
+					</view>
+				</u-col>
+				<u-col span="6">
+					<view class="demo-layout-a" @click="Jom('/pages/componentsA/baoxiu/list')">
+						<image src="../../../static/images/baoxiu.png" mode="widthFix"></image>
+					</view>
+				</u-col> 
+			</u-row>
+			<u-row justify="space-between" customStyle="margin: 10px 0 0 0" gutter="10">
+				<u-col span="6">
+					<view class="demo-layout-a" @click="Jom('/pages/componentsA/che/details')">
+						<image src="../../../static/images/chewei.png" mode="widthFix"></image>
+					</view>
+				</u-col>
+				<u-col span="6">
+					<view class="demo-layout-a" @click="Jom('/pages/componentsA/bill/bill')">
+						<image src="../../../static/images/jiaofei.png" mode="widthFix"></image>
+					</view>
+				</u-col>
+
+			</u-row>
+			
+		</view>
+		<view class="bankuai" v-if="list2.length>0">
+			<view class="biaoti">
+				<u-icon label="小区人物风采" size="20"
+					name="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/shu.png"></u-icon>
+
+			</view>
+			<view class="xiabiao">
+				<u-scroll-list  :indicator="false">
+					<view class="scroll-list" style="flex-direction: row;">
+						<view class="scroll-list__goods-item" v-for="(item, index) in list2" :key="index"
+							:class="[(index === 9) && 'scroll-list__goods-item--no-margin-right']">
+							<image class="scroll-list__goods-item__image" :src="item.ioc" mode=""></image>
+							
+							<text class="scroll-list__goods-item__text">{{ item.zw }}</text>
+							<text class="scroll-list__goods-item__text jiazu">{{ item.name }}</text>
+							
+						</view>
+					</view>
+				</u-scroll-list>
+			</view>
+		</view>
+		<view class="bankuai" >
+			<view class="biaoti">
+				<u-icon label="社区活动" size="20"
+					name="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/shu.png"></u-icon>
+		
+			</view>
+			<view class="biankuang" v-for="(itme,index) in huodonglist " :key="index"  @click="Jom('/pages/componentsB/activity/details?id='+itme.id)">
+				<image :src="itme.ioc" mode="widthFix" class="huodongimage"></image>
+				<view class="huodongtitle">{{itme.title}}</view>
+				<view class="huodongtitle"><text>活动名额：{{itme.rmun}}名</text></view>
+				<view class="huodongtitle">报名开始时间：{{itme.stime}}</view>
+				<view class="huodongtitle">报名结束时间：{{itme.etime}}</view>
+				<view class="huodongtitle"><text>报名状态：{{itme.zt==1?"进行中": itme.zt==3?"结束":"未开始"}}</text></view>
+			</view>
+			
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				current: 0,
+				currentNum: 0,
+				list: [],
+				text4: [],
+				
+				list2: [],
+				huodonglist: [],
+			}
+		},
+		onLoad() {
+			// setInterval(this.gethome(), 5000);
+
+			// this.gethome()		
+		},
+		onShow() {
+			this.gethome()
+		},
+		methods: {
+			gethome() {
+				uni.$u.http.post('Carousel/xcxList', {}).then(res => {
+					this.list = res.data;
+				})
+				uni.$u.http.post('Notice/xcxlist', {
+						aid: 0,
+						name: "",
+						page: 1,
+						limit: 5
+					}).then(res => {
+						// this.list = res.data;
+						// console.log(res.data)
+						var arr = [];
+						for (let i = 0; i < res.data.length; i++) {
+							arr.push(res.data[i].title);
+						}
+						this.text4 = arr;
+						// console.log(arr)
+						// console.log(this.text4)
+				})
+				uni.$u.http.post('AdminUser/xcxlist', {}).then(res => {
+					this.list2 = res.data;
+				})
+				uni.$u.http.post('Activity/xcxlist', {lx:0,page:1,limit:10}).then(res => {
+					this.huodonglist = res.data
+				})
+			},
+			Jom(path){
+				let rz=uni.getStorageSync('userData').rz;
+				if(rz==0){
+					uni.$u.route({
+						url: "/pages/componentsA/fangwu/add"
+					})
+				}else{
+					uni.$u.route({
+						url: path
+					})
+				}
+			},
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

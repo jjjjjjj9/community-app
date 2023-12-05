@@ -1,0 +1,51 @@
+<template>
+	<div>
+		<view v-if="list.length>0">
+			<view class="body_gong" v-for="(itme,index) in list" :key="index">
+				<view class="fu_title">{{itme.title}} </view>
+				<u-line margin="20rpx 0rpx"></u-line>
+				<view class="time">
+					<u-icon :label="itme.ctime" size="20" labelSize="14" labelColor="#747474" name="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/time.png"></u-icon>
+				</view>
+			</view>
+		</view>
+		<view v-if="list.length==0">
+			<u-empty marginTop="100"
+			        mode="message"
+			        icon="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/xia/xiaoxi.png"
+			>
+			</u-empty>
+		</view>
+		
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				list: []
+			}
+		},
+		onLoad() {	
+			this.gethome()
+		},
+		onShow() {
+			
+		},
+		methods: {
+			gethome(id) {
+				uni.$u.http.post('News/list', {wxid:uni.getStorageSync('userData').uid}).then(res => {
+					this.list = res.data;
+					
+				})
+			},
+			
+			
+		},
+	}
+</script>
+
+<style>
+
+</style>

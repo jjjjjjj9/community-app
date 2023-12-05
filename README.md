@@ -1,0 +1,143 @@
+<h4>
+    住宅社区物业微信小程序开发功能：
+</h4>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;社区服务
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;物业服务
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;便民服务
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;通知公告
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;社区活动
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;问卷调查
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;在线投票
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;社区资讯
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;我的房屋
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;房屋认证
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;我的储藏室
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;缴费清单
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;投诉建议
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;在线报修
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;我需要帮助
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;找师傅
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;联系物业
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;我的车位
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;红色服务
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;社区志愿
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;爱心捐款
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;爱心物资
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;社区交流论坛
+</p>
+<h4>
+    使用说明
+</h4>
+<ol class=" list-paddingleft-2">
+    <li>
+        <p>
+            本项目开源的目的是让每个人轻松搭建自己，轻松上手，但是您还是有一些必要的环境准备，在运行本项目之前，您必须完成以下的步骤。
+        </p>
+    </li>
+    <li>
+        <p>
+            环境要求：为了避免运行开发中遇到一些意想不到的问题，我们推荐你安装如下环境。Git Node9+ hbuilderX 微信开发者工具
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>本项目后台为有偿开源，详情咨询微信：xinfeng0921</strong>
+        </p>
+    </li>
+</ol>
+<h4>
+    安装教程
+</h4>
+<ol class=" list-paddingleft-2">
+    <li>
+        <p>
+            克隆本项目到本地
+        </p>
+    </li>
+    <li>
+        <p>
+            配置hbuilderX 该项目推荐使用hbuilderX调试编写，在使用之前请进行必要的配置：node和微信开发者工具。
+        </p>
+    </li>
+    <li>
+        <p>
+            开始使用 打开hbuilderX导入项目，运行-&gt;运行到浏览器（在电脑端调试）或者-&gt;运行到手机或模拟器（在手机端调试）。
+        </p>
+    </li>
+    <li>
+        <p>
+            管理端：https://gitee.com/xxf_0921/SAAS
+        </p>
+    </li>
+</ol>
+<h4>
+    演示版
+	
+</h4>
+<ol class=" list-paddingleft-2">
+    <li>
+        <p>
+           <img src="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/xia/gh_4532c0efe439_860.jpg"/>
+        </p>
+    </li>
+    <li>
+        <p>
+            管理端演示地址：https://yuanmajie.top/wuye/#/login  账号 ：admin 密码：123456
+        </p>
+    </li>
+</ol>
+<h4>
+    功能展示
+	<img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658762266.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658775393.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658776347.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658787516.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658803261.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658803679.jpg"/><img src="https://xiaomubiao0724-jingshan.oss-cn-beijing.aliyuncs.com/xcx/1674658812591.jpg"/>
+</h4>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>

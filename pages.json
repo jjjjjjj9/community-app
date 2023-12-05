@@ -1,0 +1,325 @@
+{
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsA/test/test", //启动页面，必选
+	// 		"query": "" //启动参数，在页面的onLoad函数里面得到
+	// 	}]
+	// },
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/example/home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/example/home/blank",
+			"style": {
+				"navigationBarTitleText": "建设中"
+			}
+		},
+		{
+			"path": "pages/example/classification/index",
+			"style": {
+				"navigationBarTitleText": "社区服务" 
+			}
+		},
+		{
+			"path": "pages/example/storage/index",
+			"style": {
+				"navigationBarTitleText": "社区置物"
+			}
+		},
+		{
+			"path": "pages/example/news/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/example/user/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "pages/componentsA",
+		"pages": [
+			{
+				"path": "fangwu/add",
+				"style": {
+					"navigationBarTitleText": "房屋认证"
+				}
+			},{
+				"path": "fangwu/details",
+				"style": {
+					"navigationBarTitleText": "我的房屋"
+				}
+			},{
+				"path": "che/details",
+				"style": {
+					"navigationBarTitleText": "我的车位"
+				}
+			},{
+				"path": "baoxiu/baoxiu", 
+				"style": {
+					"navigationBarTitleText": "在线报修"
+				}
+			},{
+				"path": "baoxiu/list", 
+				"style": {
+					"navigationBarTitleText": "我的报修"
+				}
+			},{
+				"path": "baoxiu/details", 
+				"style": {
+					"navigationBarTitleText": "报修详情"
+				}
+			},{
+				"path": "baoxiu/gongdan", 
+				"style": {
+					"navigationBarTitleText": "维修工单"
+				}
+			},{
+				"path": "baoxiu/details_gd", 
+				"style": {
+					"navigationBarTitleText": "维修工单详情"
+				}
+			},
+			
+			{
+				"path": "bangzhu/add", 
+				"style": {
+					"navigationBarTitleText": "我需要帮助"
+				}
+			},{
+				"path": "bangzhu/list", 
+				"style": {
+					"navigationBarTitleText": "我的求助"
+				}
+			},{
+				"path": "bangzhu/details", 
+				"style": {
+					"navigationBarTitleText": "求助详情"
+				}
+			},{
+				"path": "suggestion/add", 
+				"style": {
+					"navigationBarTitleText": "在线投诉与建议"
+				}
+			},{
+				"path": "suggestion/list", 
+				"style": {
+					"navigationBarTitleText": "我的投诉建议"
+				}
+			},{
+				"path": "suggestion/gdlist", 
+				"style": {
+					"navigationBarTitleText": "投诉处理"
+				}
+			},{
+				"path": "suggestion/gddetails", 
+				"style": {
+					"navigationBarTitleText": "投诉处理详情"
+				}
+			},{
+				"path": "suggestion/details", 
+				"style": {
+					"navigationBarTitleText": "投诉建议详情"
+				}
+			},{
+				"path": "bill/bill", 
+				"style": {
+					"navigationBarTitleText": "我的缴费"
+				}
+			},{
+				"path": "security/security", 
+				"style": {
+					"navigationBarTitleText": "社区安防"
+				}
+			}
+		]
+	}, {
+		"root": "pages/componentsB",
+		"pages": [{
+			"path": "notice/list",
+			"style": {
+				"navigationBarTitleText": "物业通知列表"
+			}
+		},{
+			"path": "notice/details",
+			"style": {
+				"navigationBarTitleText": "物业通知详情"
+			}
+		},
+		{
+			"path": "info/list",
+			"style": {
+				"navigationBarTitleText": "社区资讯列表"
+			}
+		},{
+			"path": "info/details",
+			"style": {
+				"navigationBarTitleText": "社区资讯详情"
+			}
+		},{
+			"path": "phone/phone",
+			"style": {
+				"navigationBarTitleText": "社区热线"
+			}
+		},
+		{
+			"path": "activity/list",
+			"style": {
+				"navigationBarTitleText": "活动列表"
+			}
+		},{
+			"path": "activity/details",
+			"style": {
+				"navigationBarTitleText": "活动详情"
+			}
+		},{
+			"path": "activity/add",
+			"style": {
+				"navigationBarTitleText": "活动在线报名"
+			}
+		},{
+			"path": "activity/userList",
+			"style": {
+				"navigationBarTitleText": "我的活动"
+			}
+		},
+		{
+			"path": "questionnaire/list",
+			"style": {
+				"navigationBarTitleText": "问卷调查列表"
+			}
+		},{
+			"path": "questionnaire/details",
+			"style": {
+				"navigationBarTitleText": "在线问卷调查"
+			}
+		}
+	]}, {
+		"root": "pages/componentsC",
+		"pages": [{
+			"path": "storage/storage",
+			"style": {
+				"navigationBarTitleText": "我的置物"
+			}
+		},{
+			"path": "storage/add",
+			"style": {
+				"navigationBarTitleText": "发布置物"
+			}
+		},{
+			"path": "storage/details",
+			"style": {
+				"navigationBarTitleText": "置物详情"
+			}
+		},{
+			"path": "user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},{
+			"path": "agreement/agreement",
+			"style": {
+				"navigationBarTitleText": "用户协议"
+			}
+		},{
+			"path": "policy/policy",
+			"style": {
+				"navigationBarTitleText": "隐私政策"
+			}
+		},{
+			"path": "help/help",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},{
+			"path": "volunteer/volunteer",
+			"style": {
+				"navigationBarTitleText": "志愿者"
+			}
+		},{
+			"path": "volunteer/add",
+			"style": {
+				"navigationBarTitleText": "在线申请志愿者"
+			}
+		},{
+			"path": "contribution/list",
+			"style": {
+				"navigationBarTitleText": "奉献爱心、传递温情"
+			}
+		},{
+			"path": "contribution/add",
+			"style": {
+				"navigationBarTitleText": "在线贡献爱心"
+			}
+		},{
+			"path": "material/material",
+			"style": {
+				"navigationBarTitleText": "奉献爱心、传递温情"
+			}
+		},{
+			"path": "material/add",
+			"style": {
+				"navigationBarTitleText": "在线物资捐赠"
+			}
+		}
+		]
+	}],
+	"preloadRule": {
+		"pages/example/home/index": {
+			"network": "all",
+			"packages": ["pages/componentsA", "pages/componentsB"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": " ",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#9FC6FF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/example/home/index",
+				"iconPath": "static/footer/home.png",
+				"selectedIconPath": "static/footer/home-act.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/example/classification/index",
+				"iconPath": "static/footer/fenlei.png",
+				"selectedIconPath": "static/footer/fenlei-act.png",
+				"text": "服务"
+			},
+			{
+				"pagePath": "pages/example/storage/index",
+				"iconPath": "static/footer/zhiwu.png",
+				"selectedIconPath": "static/footer/zhiwu-act.png",
+				"text": "置物"
+			},
+			{
+				"pagePath": "pages/example/news/index",
+				"iconPath": "static/footer/xiaoxi.png",
+				"selectedIconPath": "static/footer/xiaoxi-act.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/example/user/index",
+				"iconPath": "static/footer/my.png",
+				"selectedIconPath": "static/footer/my-act.png",
+				"text": "我的"
+			}
+		]
+	}
+}

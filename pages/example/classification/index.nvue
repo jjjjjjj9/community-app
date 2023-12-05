@@ -1,0 +1,79 @@
+
+
+<template>
+	<view>
+		<view class="bankuai" v-for="(item,index) in list" :key="index">
+			<view class="biaoti">
+				<u-icon :label="item.title" size="20" name="https://shopimges.oss-cn-hangzhou.aliyuncs.com/wuye/shu.png"></u-icon>
+			</view>
+			<view>
+				<u-grid
+					:border="false"
+					col="4"
+				>
+					<u-grid-item
+						v-for="(listItem,listIndex) in item.list"
+						:key="listIndex"
+						customStyle="padding-top: 10px; padding-bottom: 10px"
+						@click="Jom(listItem)"
+					>
+						<u-icon
+							:name="listItem.ioc"
+							:size="40"
+						></u-icon>
+						<text class="grid-text">{{listItem.name}}</text>
+					</u-grid-item>
+				</u-grid>
+			</view>
+			
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				list: [],
+				
+			}
+		},
+		onLoad() {		
+		},
+		onShow() {
+			this.gethome()
+		},
+		methods: {
+			gethome() {
+				uni.$u.http.post('Menu/list', {}).then(res => {
+					this.list = res.data;
+				})
+			},
+			Jom(itme){
+				if(itme.aid==1){
+					let rz=uni.getStorageSync('userData').rz;
+					if(rz==0){
+						uni.$u.route({
+							url: "/pages/componentsA/fangwu/add"
+						})
+					}else{
+						uni.$u.route({
+							url: itme.url
+						})
+					}
+				}else{
+					uni.$u.route({
+						url: itme.url
+					})
+				}
+				
+			}
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>
