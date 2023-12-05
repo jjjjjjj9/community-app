@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directory
+public/vendor/
+
+# Local environment variables
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
